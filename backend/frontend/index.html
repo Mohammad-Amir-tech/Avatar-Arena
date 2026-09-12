@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvatarArena — AI Debate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-top">
+                <h1>⚔️ AvatarArena</h1>
+                <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            </div>
+            <p class="subtitle">Three AI avatars. One topic. Live debate in any language.</p>
+        </header>
+
+        <!-- CUSTOM AVATAR CREATOR -->
+        <section class="creator-section">
+            <h2>🎨 Create Your Avatar</h2>
+            <div class="creator-form">
+                <div class="photo-upload">
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                    <div class="photo-preview" id="photoPreview">
+                        <span>+ Upload Photo</span>
+                    </div>
+                </div>
+                <div class="creator-fields">
+                    <input type="text" id="avatarName" placeholder="Avatar name (e.g. Rahul)" maxlength="20">
+                    <select id="avatarPersonality">
+                        <option value="optimist">😊 Optimist (argues FOR)</option>
+                        <option value="skeptic">🤔 Skeptic (argues AGAINST)</option>
+                        <option value="neutral">⚖️ Neutral (balanced)</option>
+                    </select>
+                    <select id="avatarLanguage">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="hi">🇮🇳 हिन्दी</option>
+                        <option value="ur">🇵🇰 اردو</option>
+                        <option value="hinglish">🇮🇳 Hinglish</option>
+                    </select>
+                    <button id="saveAvatarBtn">Save Avatar</button>
+                </div>
+            </div>
+            <div id="savedAvatars" class="saved-avatars"></div>
+        </section>
+
+        <!-- DEBATE INPUT -->
+        <div class="input-row">
+            <input type="text" id="topicInput" placeholder="Enter a topic... e.g. 'AI in education'" />
+            <select id="languageSelect">
+                <optgroup label="🇮🇳 Indian Languages">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="hi">🇮🇳 हिन्दी (Hindi)</option>
+                    <option value="ur">🇵🇰 اردو (Urdu)</option>
+                    <option value="bn">🇮🇳 বাংলা (Bengali)</option>
+                    <option value="ta">🇮🇳 தமிழ் (Tamil)</option>
+                    <option value="te">🇮🇳 తెలుగు (Telugu)</option>
+                    <option value="mr">🇮🇳 मराठी (Marathi)</option>
+                    <option value="gu">🇮🇳 ગુજરાતી (Gujarati)</option>
+                    <option value="kn">🇮🇳 ಕನ್ನಡ (Kannada)</option>
+                    <option value="ml">🇮🇳 മലയാളം (Malayalam)</option>
+                    <option value="pa">🇮🇳 ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="hinglish">🇮🇳 Hinglish</option>
+                </optgroup>
+                <optgroup label="🌍 World Languages">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                </optgroup>
+            </select>
+            <select id="customAvatarSelect">
+                <option value="">👥 Default Avatars</option>
+            </select>
+            <select id="customSideSelect">
+                <option value="pro">Join as PRO</option>
+                <option value="con">Join as CON</option>
+            </select>
+            <button id="startBtn">Start Debate</button>
+        </div>
+
+        <!-- ARENA -->
+        <div class="arena" id="arena">
+            <div class="agent-card" id="card-pro">
+                <div class="avatar-container">
+                    <img src="avatars/pro.jpg" alt="Alex" class="avatar-img" id="avatar-pro">
+                    <div class="speaking-indicator" id="speak-pro"></div>
+                </div>
+                <h3 id="name-pro">Alex <span class="role">Pro</span></h3>
+                <div class="bubble" id="text-pro"></div>
+            </div>
+
+            <div class="agent-card" id="card-con">
+                <div class="avatar-container">
+                    <img src="avatars/conn.jpg" alt="Maya" class="avatar-img" id="avatar-con">
+                    <div class="speaking-indicator" id="speak-con"></div>
+                </div>
+                <h3 id="name-con">Maya <span class="role">Con</span></h3>
+                <div class="bubble" id="text-con"></div>
+            </div>
+
+            <div class="agent-card" id="card-judge">
+                <div class="avatar-container">
+                    <img src="avatars/judge.jpg" alt="Judge" class="avatar-img" id="avatar-judge">
+                    <div class="speaking-indicator" id="speak-judge"></div>
+                </div>
+                <h3 id="name-judge">Judge <span class="role">Neutral</span></h3>
+                <div class="bubble" id="text-judge"></div>
+            </div>
+        </div>
+
+        <div class="status" id="status">Ready. Choose a language and enter a topic.</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Made with ❤️ by <span class="author">Mohammad Amir</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
