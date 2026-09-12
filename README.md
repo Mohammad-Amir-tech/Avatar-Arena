@@ -58,7 +58,6 @@ Unlike a traditional chatbot, AvatarArena creates a **real-time AI conversation*
 
 🌐 **[Launch AvatarArena](https://avatar-arena.onrender.com)**
 
-> ⏱️ **Note:** The free Render tier may sleep after inactivity. The first request can take around 30–50 seconds while the service wakes up.
 
 ### Try These Topics
 
@@ -184,10 +183,10 @@ Unlike a traditional chatbot, AvatarArena creates a **real-time AI conversation*
 ┌──────────────────────────────────────────────────────────┐
 │                     USER INTERFACE                       │
 │                                                          │
-│   ┌───────────┐    ┌───────────┐    ┌──────────────┐    │
-│   │   Alex    │    │   Maya    │    │    Judge     │    │
-│   │   PRO     │    │   CON     │    │   NEUTRAL    │    │
-│   └─────┬─────┘    └─────┬─────┘    └──────┬───────┘    │
+│   ┌───────────┐    ┌───────────┐    ┌──────────────┐     │
+│   │   Alex    │    │   Maya    │    │    Judge     │     │
+│   │   PRO     │    │   CON     │    │   NEUTRAL    │     │
+│   └─────┬─────┘    └─────┬─────┘    └──────┬───────┘     │
 │         │                │                 │             │
 └─────────┼────────────────┼─────────────────┼─────────────┘
           │                │                 │
@@ -202,19 +201,19 @@ Unlike a traditional chatbot, AvatarArena creates a **real-time AI conversation*
 │              ┌──────────────────────────┐                │
 │              │   DEBATE ORCHESTRATOR    │                │
 │              │                          │                │
-│              │ Turn 1 → Pro            │                │
-│              │ Turn 2 → Con            │                │
-│              │ Turn 3 → Pro            │                │
-│              │ Turn 4 → Con            │                │
-│              │ Turn 5 → Judge          │                │
+│              │ Turn 1 → Pro             │                │
+│              │ Turn 2 → Con             │                │
+│              │ Turn 3 → Pro             │                │
+│              │ Turn 4 → Con             │                │
+│              │ Turn 5 → Judge           │                │
 │              └────────────┬─────────────┘                │
 │                           │                              │
 │            ┌──────────────┼──────────────┐               │
 │            ▼              ▼              ▼               │
-│       ┌─────────┐   ┌───────────┐   ┌─────────┐         │
-│       │ Groq AI │   │ edge-tts  │   │ SQLite  │         │
-│       │   LLM   │   │   Voice   │   │   DB    │         │
-│       └─────────┘   └───────────┘   └─────────┘         │
+│       ┌─────────┐   ┌───────────┐   ┌─────────┐          │
+│       │ Groq AI │   │ edge-tts  │   │ SQLite  │          │
+│       │   LLM   │   │   Voice   │   │   DB    │          │
+│       └─────────┘   └───────────┘   └─────────┘          │
 │                                                          │
 └──────────────────────────────────────────────────────────┘
                            │
@@ -246,53 +245,21 @@ Unlike a traditional chatbot, AvatarArena creates a **real-time AI conversation*
 
 ### Main Interface — English Debate
 
-Add your screenshot as:
-
-```text
-screenshots/screenshot-english.png
-```
-
-Then use:
-
 ![AvatarArena English Debate](screenshots/screenshot-english.png)
 
 ### Hindi Debate — Multilingual Support
-
-Add your screenshot as:
-
-```text
-screenshots/screenshot-hindi.png
-```
-
-Then use:
 
 ![AvatarArena Hindi Debate](screenshots/screenshot-hindi.png)
 
 ### Custom Avatar Creator
 
-Add your screenshot as:
-
-```text
-screenshots/screenshot-avatar.png
-```
-
-Then use:
-
 ![AvatarArena Custom Avatar](screenshots/screenshot-avatar.png)
 
 ### Light Mode
 
-Add your screenshot as:
-
-```text
-screenshots/screenshot-light.png
-```
-
-Then use:
-
 ![AvatarArena Light Mode](screenshots/screenshot-light.png)
 
-> 💡 **Tip:** If you haven't added screenshots yet, you can temporarily remove the image lines above. Add them later when your screenshots are ready.
+
 
 ---
 
@@ -394,9 +361,9 @@ Avatar-Arena/
 │   ├── screenshot-avatar.png
 │   └── screenshot-light.png
 │
-├── README.md
-├── LICENSE
-└── .gitignore
+|
+|
+└── README.md
 ```
 
 ---
@@ -612,7 +579,6 @@ When reporting a bug, please include:
 
 This project is licensed under the **MIT License**.
 
-See the [LICENSE](LICENSE) file for the complete license text.
 
 ```text
 MIT License
