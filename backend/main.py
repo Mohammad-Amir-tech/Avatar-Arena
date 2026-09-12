@@ -308,7 +308,7 @@ async def delete_avatar(avatar_id: str):
         return {"status": "deleted", "id": avatar_id}
     return {"status": "not_found", "id": avatar_id}
 
-app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
 
 if __name__ == "__main__":
